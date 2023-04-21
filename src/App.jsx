@@ -11,12 +11,12 @@ function App() {
         <HeadingOne />
       </header>
       <main>
-        <section>
+        <section className="hallo">
           <div className="flexContainer space-between">
             <HeadingTwo />
             <SeeMoreButton />
           </div>
-          <div className="flexContainer scroll">
+          <div className="flexContainer scroll MovieCardContainer">
             <MovieCard />
             <MovieCard />
             <MovieCard />

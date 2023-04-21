@@ -2,7 +2,13 @@
 
 #root {
   max-width: 768px;
+  padding: 2rem;
   text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  margin: 0;
 }
 
 h1,
@@ -23,6 +29,11 @@ h2 {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scroll ::-webkit-scrollbar {
   display: none;
+}
+
+.MovieCardContainer {
+  margin: 0 -2rem;
 }
