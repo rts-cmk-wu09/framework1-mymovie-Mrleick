@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-const StyledHeading = styled.h1`
-  font-size: ${(props) => props.size};
-  font-weight: ${(props) => props.weight};
+const StyledHeading = styled((props) => props.as)`
+  font-size: ${(props) => props.size}px;
   grid-column-start: 2;
-  color: ${(props) => props.color};
   justify-self: center;
 `;
 
