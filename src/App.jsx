@@ -1,22 +1,35 @@
 import "./App.css";
-import HeadingOne from "./components/HeadingOne";
 import MovieCard from "./templates/MovieCard";
-import HeadingTwo from "./components/HeadingTwo";
 import SeeMoreButton from "./components/SeeMoreButton";
+import Heading from "./components/Heading";
+import Switch from "./components/Switch";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <HeadingOne />
+      <header className="gridContainer">
+        <Heading
+          title="MyMovie"
+          size="16px"
+          weight="bold"
+          as="h1"
+          color="#110E47"
+        />
+        <Switch />
       </header>
       <main>
-        <section className="hallo">
+        <section>
           <div className="flexContainer space-between">
-            <HeadingTwo />
+            <Heading
+              title="Now Showing"
+              size="16px"
+              weight="regular"
+              color="#110e47"
+              as="h2"
+            />
             <SeeMoreButton />
           </div>
-          <div className="flexContainer scroll MovieCardContainer">
+          <div className="flexContainer movieCardContainer">
             <MovieCard />
             <MovieCard />
             <MovieCard />

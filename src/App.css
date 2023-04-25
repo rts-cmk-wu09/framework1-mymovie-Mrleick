@@ -1,39 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@300;500&display=swap");
+@import "normalize.css";
 
 #root {
   max-width: 768px;
   padding: 2rem;
-  text-align: center;
-  font-family: 'Merriweather', serif;
+  font-family: "Mulish", sans-serif;
 }
 
-body {
+body,
+figure,
+p,
+h1,
+h2,
+h3 {
   margin: 0;
+  padding: 0;
 }
 
 h1,
 h2 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .flexContainer {
   display: flex;
 }
 
+.gridContainer {
+  display: grid;
+}
+
 .space-between {
   justify-content: space-between;
+  align-items: center;
 }
 
-.scroll {
+header {
+  height: 60px;
+}
+
+.movieCardContainer {
+  margin: 2rem -2rem;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  height: 320px;
   overflow-x: scroll;
   -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
   scrollbar-width: none;
+  /* Firefox */
+  /* scroll-behavior: smooth; */
 }
 
-.scroll ::-webkit-scrollbar {
+.movieCardContainer::-webkit-scrollbar {
   display: none;
-}
-
-.MovieCardContainer {
-  margin: 0 -2rem;
 }
