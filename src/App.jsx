@@ -4,8 +4,7 @@ import SeeMoreButton from "./components/SeeMoreButton";
 import Heading from "./components/Heading";
 import Switch from "./components/Switch";
 import SecondMovieCard from "./templates/SecondMovieCard";
-import StyledLabel from "./components/Label";
-
+import Navigation from "./components/Navi";
 
 function App() {
   return (
@@ -28,17 +27,27 @@ function App() {
         </section>
         <section>
           <div className="flexContainer space-between">
-            <Heading title="Popular" size="16" as="h1" marginBottom="10" />
+            <Heading
+              title="Popular"
+              size="16"
+              as="h1"
+              marginBottom="10"
+              weight="900"
+            />
             <SeeMoreButton />
           </div>
           <div className="flexContainer secondMovieCardContainer">
+            <SecondMovieCard />
+            <SecondMovieCard />
             <SecondMovieCard />
             <SecondMovieCard />
           </div>
         </section>
       </main>
       <footer>
-        <nav></nav>
+        <nav>
+          <Navigation />
+        </nav>
       </footer>
     </div>
   );

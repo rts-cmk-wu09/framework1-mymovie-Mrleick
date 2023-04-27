@@ -3,6 +3,8 @@ import Image from "../components/Image";
 import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
 import StyledLabel from "../components/Label";
+import Time from "../components/Time";
+
 const StyledArticle = styled.article`
   height: 120px;
   display: flex;
@@ -28,6 +30,7 @@ const SecondMovieCard = () => {
         <StyledLabel />
         <StyledLabel />
         </div>
+        <Time />
       </div>
     </StyledArticle>
   );

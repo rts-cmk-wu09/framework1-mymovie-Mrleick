@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from "../components/Image";
 import Heading from "../components/Heading";
 import MovieRating from "../components/MovieRating";
+import Time from "../components/Time";
 
 const StyledArticle = styled.article`
   height: 283px;
@@ -17,10 +18,11 @@ const MovieCard = () => {
         <Image />
       </figure>
       <Heading
-        title="Movie Title"
-        size="14px"
-        weight="bold"
-        color="000"
+        title="Spiderman: No Way
+        Home"
+        size="14"
+        weight="500"
+        color="tomato"
         justify-self="center"
         as="h3"
       />

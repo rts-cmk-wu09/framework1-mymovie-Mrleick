@@ -6,11 +6,18 @@ const StyledHeading = styled((props) => props.as)`
   justify-self: center;
   margin-bottom: ${(props) => props.marginBottom}px;
   width: ${(props) => props.width}px;
+  font-weight: ${(props) => props.fontWeight};
 `;
 
 const Heading = (props) => {
   return (
-    <StyledHeading size={props.size} marginBottom={props.marginBottom} as={props.as} width={props.width}>
+    <StyledHeading
+      size={props.size}
+      marginBottom={props.marginBottom}
+      as={props.as}
+      width={props.width}
+      fontWeight={props.fontWeight}
+    >
       {props.title}
     </StyledHeading>
   );
