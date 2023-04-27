@@ -16,7 +16,14 @@ const MovieCard = () => {
       <figure>
         <Image />
       </figure>
-      <Heading title="Movie Title" size="14px" justify-self="center" as="h3" />
+      <Heading
+        title="Movie Title"
+        size="14px"
+        weight="bold"
+        color="000"
+        justify-self="center"
+        as="h3"
+      />
       <MovieRating />
     </StyledArticle>
   );

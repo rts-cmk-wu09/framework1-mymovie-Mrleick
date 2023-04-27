@@ -62,3 +62,16 @@ header {
 .movieCardContainer::-webkit-scrollbar {
   display: none;
 }
+
+.secondMovieCardContainer{
+  flex-direction: column;
+  gap: 16px;
+  width: 304px;
+}
+.LabelContainer{
+  display: flex;
+  gap: 8px;
+}
+img{
+  border-radius: 5px;
+}
