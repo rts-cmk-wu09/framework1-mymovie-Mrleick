@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@100;300;500;700&display=swap");
-=======
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@300;500&display=swap");
->>>>>>> e2c6a6eec0e1aeb9c06777af17f982364897f673
 @import "normalize.css";
 
 #root {
@@ -10,9 +6,11 @@
   font-family: "Mulish", sans-serif;
   letter-spacing: 0.75px;
 }
+
 main {
   padding: 0 2rem;
 }
+
 a {
   color: #000;
   text-decoration: none;
@@ -35,13 +33,16 @@ h2 {
   font-family: "Merriweather", serif;
   color: #110e47;
 }
+
 h3 {
   font-weight: 700;
 }
+
 h4 {
   font-weight: 300;
   color: #9c9c9c;
 }
+
 .header {
   position: fixed;
   width: calc(100vw - 4rem);
@@ -58,39 +59,31 @@ h4 {
 .gridContainer {
   display: grid;
 }
-<<<<<<< HEAD
-.justify-space-between {
-=======
 
-.space-between {
->>>>>>> e2c6a6eec0e1aeb9c06777af17f982364897f673
+.justify-space-between {
   justify-content: space-between;
 }
-<<<<<<< HEAD
+
 .wrap {
   flex-wrap: wrap;
 }
+
 .HorizontalMovieListContainer {
   padding: 76px 0 0;
 }
+
 .VerticalMovieListContainer {
   padding: 0 0 76px;
 }
+
 .VerticalMovieListTitleLayout {
   position: sticky;
   top: 60px;
   background-color: #fff;
   padding-bottom: 2rem;
 }
+
 .movieCardContainerLayout {
-=======
-
-header {
-  height: 60px;
-}
-
-.movieCardContainer {
->>>>>>> e2c6a6eec0e1aeb9c06777af17f982364897f673
   margin: 2rem -2rem;
   gap: 1rem;
   padding: 0 1rem 0 2rem;
@@ -101,21 +94,17 @@ header {
   /* Firefox */
   /* scroll-behavior: smooth; */
 }
-<<<<<<< HEAD
+
 .movieCardContainerLayout::-webkit-scrollbar {
   display: none;
 }
+
 .movieListContainerLayout {
   flex-direction: column;
   gap: 16px;
 }
+
 .movieDescriptionContainerLayout {
   margin-top: 100px;
   border: solid 1px red;
 }
-=======
-
-.movieCardContainer::-webkit-scrollbar {
-  display: none;
-}
->>>>>>> e2c6a6eec0e1aeb9c06777af17f982364897f673
