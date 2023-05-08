@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => (props.checked ? "#000000;" : "#FFFFFF")};
     
   }
+
+p {
+  color: ${(props) => (props.checked ? "#FFFFFF" : "#000000")};
+}
+
   h1, h2, h3 {
     color: ${(props) => (props.checked ? "#DBE3FF" : "#000000")};
   }
