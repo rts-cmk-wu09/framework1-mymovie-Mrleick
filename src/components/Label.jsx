@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
-const StyledLabel = styled.label`
-  width: 61px;
-  background: #dbe3ff;
+const StyledSpan = styled.span`
+  width: fit-content;
+  padding 4px 12px;
+  background-color: #DBE3FF;
+  color: #88A4E8;
   border-radius: 25px;
   text-transform: uppercase;
   font-size: 8px;
-  font-weight: 700px;
-  text-align: center;
-  padding: 4px;
-  margin-top: 8px;
-  color: #88a4e8;
 `;
 
-const Label = () => {
-  return <StyledLabel title="Horror">Horror</StyledLabel>;
+const Label = (props) => {
+  return <StyledSpan>{props.title}</StyledSpan>;
 };
 
 export default Label;

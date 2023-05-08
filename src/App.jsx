@@ -1,22 +1,40 @@
 import "./App.css";
+<<<<<<< HEAD
+import { Outlet } from "react-router-dom";
+
+function App() {
+  return (
+    <div className="app">
+      <Outlet />
+=======
 import MovieCard from "./templates/MovieCard";
 import SeeMoreButton from "./components/SeeMoreButton";
 import Heading from "./components/Heading";
 import Switch from "./components/Switch";
-import SecondMovieCard from "./templates/SecondMovieCard";
-import Navigation from "./components/Navi";
 
 function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <Heading title="MyMovies" size="16" as="h1" />
+        <Heading
+          title="MyMovie"
+          size="16px"
+          weight="bold"
+          as="h1"
+          color="#110E47"
+        />
         <Switch />
       </header>
       <main>
         <section>
           <div className="flexContainer space-between">
-            <Heading title="Now Showing" size="16" as="h2" />
+            <Heading
+              title="Now Showing"
+              size="16px"
+              weight="regular"
+              color="#110e47"
+              as="h2"
+            />
             <SeeMoreButton />
           </div>
           <div className="flexContainer movieCardContainer">
@@ -25,28 +43,12 @@ function App() {
             <MovieCard />
           </div>
         </section>
-        <section>
-          <div className="flexContainer space-between">
-            <Heading
-              title="Popular"
-              size="16"
-              as="h1"
-              marginBottom="10"
-              weight="900"
-            />
-            <SeeMoreButton />
-          </div>
-          <div className="flexContainer secondMovieCardContainer">
-            <SecondMovieCard />
-            <SecondMovieCard />
-            <SecondMovieCard />
-            <SecondMovieCard />
-          </div>
-        </section>
+        <section></section>
       </main>
       <footer>
-          <Navigation />
+        <nav></nav>
       </footer>
+>>>>>>> e2c6a6eec0e1aeb9c06777af17f982364897f673
     </div>
   );
 }
