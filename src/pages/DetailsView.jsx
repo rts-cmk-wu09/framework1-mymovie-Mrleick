@@ -1,10 +1,12 @@
-import styled, { css } from "styled-components";
-import Switch from "../components/Switch";
+import React from "react";
+import styled from "styled-components";
 import { FaArrowLeft, FaPlay } from "react-icons/fa";
 import MovieInfo from "../templates/MovieInfo";
 import MovieDescription from "../templates/MovieDescription";
 import MovieCast from "../templates/MovieCast";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import Switch from "../components/Switch";
 
 const StyledFaArrowLeft = styled(FaArrowLeft)`
   color: #fff;
@@ -67,6 +69,19 @@ const DetailsView = () => {
       </StyledMain>
     </>
   );
+};
+
+export const detailsViewData = async (id) => {
+  return await Promise.allSettled([
+    axios(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=74800f373e5a296266dcd67ef1c52da6`
+    ),
+  ]).then((data) => {
+    console.log(data);
+    return {
+      DetailsData: data[0].value.data,
+    };
+  });
 };
 
 export default DetailsView;

@@ -12,12 +12,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ListViewData } from "./pages/ListView";
+import { detailsViewData } from "./pages/DetailsView";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<RouteNotFound />}>
       <Route index loader={ListViewData} element={<ListView />} />
-      <Route path="/details/:id" element={<DetailsView />} />
+      <Route
+        path="/details/:id"
+        loader={({ params }) => detailsViewData(params.id)}
+        element={<DetailsView />}
+      />
     </Route>
   )
 );
