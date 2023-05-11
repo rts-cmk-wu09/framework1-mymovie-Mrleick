@@ -2,9 +2,9 @@ import NowShowing from "../templates/NowShowing";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import Switch from "../components/Switch";
-import MovieItem from "../templates/MovieItem";
+import Popular from "../templates/Popular";
 import Navigation from "../components/Navigation";
-import { Link } from "react-router-dom";
+import axios from "axios";
 
 const ListView = () => {
   return (
@@ -29,7 +29,7 @@ const ListView = () => {
             <Button title="See More" />
           </div>
           <div className="flexContainer movieListContainerLayout">
-            <MovieItem />
+            <Popular />
           </div>
         </section>
       </main>
@@ -38,6 +38,22 @@ const ListView = () => {
       </footer>
     </>
   );
+};
+
+export const ListViewData = async () => {
+  return await Promise.allSettled([
+    axios(
+      "https://api.themoviedb.org/3/movie/now_playing/?api_key=74800f373e5a296266dcd67ef1c52da6"
+    ),
+    axios(
+      "https://api.themoviedb.org/3/movie/popular/?api_key=74800f373e5a296266dcd67ef1c52da6"
+    ),
+  ]).then((data) => {
+    return {
+      nowShowing: data[0].value.data.results,
+      popular: data[1].value.data.results,
+    };
+  });
 };
 
 export default ListView;

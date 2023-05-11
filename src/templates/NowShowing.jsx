@@ -12,15 +12,19 @@ const StyledArticle = styled.article`
 `;
 
 const NowShowing = () => {
-  const MovieCardData = useLoaderData();
-  console.log(MovieCardData);
+  const MovieData = useLoaderData();
   return (
     <>
-      {MovieCardData.results.map((data) => (
+      {MovieData.nowShowing.map((data) => (
         <Link to={`details/${data.id}`} key={data.id}>
           <StyledArticle>
             <figure>
-              <Image width="143" shadow={true} src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`} alt="Cover Image" />
+              <Image
+                width="143"
+                shadow={true}
+                src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`}
+                alt="Cover Image"
+              />
             </figure>
             <Heading
               title={
@@ -38,13 +42,5 @@ const NowShowing = () => {
     </>
   );
 };
-
-export async function loader() {
-  const res = await fetch(
-    "https://api.themoviedb.org/3/movie/now_playing/?api_key=74800f373e5a296266dcd67ef1c52da6"
-  );
-  const data = await res.json();
-  return data;
-}
 
 export default NowShowing;
