@@ -1,21 +1,22 @@
+import "./main.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./App";
 import DetailsView from "./pages/DetailsView";
 import ListView from "./pages/ListView";
-import { loader as MovieDataLoader } from "./templates/NowShowing";
-import ErrorView from "./pages/RouteNotFound";
+import RouteNotFound from "./pages/RouteNotFound";
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  RouterProvider,
   Route,
+  RouterProvider,
 } from "react-router-dom";
-import App from "./App";
+import { ListViewData } from "./pages/ListView";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />} errorElement={<ErrorView />}>
-      <Route index loader={MovieDataLoader} element={<ListView />} />
+    <Route path="/" element={<App />} errorElement={<RouteNotFound />}>
+      <Route index loader={ListViewData} element={<ListView />} />
       <Route path="/details/:id" element={<DetailsView />} />
     </Route>
   )

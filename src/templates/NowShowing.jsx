@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "../components/Image";
 import Rating from "../components/Rating";
 import Heading from "../components/Heading";
-import Button from "../components/Button";
 import { Link, useLoaderData } from "react-router-dom";
 
 const StyledArticle = styled.article`
@@ -13,24 +12,20 @@ const StyledArticle = styled.article`
 `;
 
 const NowShowing = () => {
-  const movieCardData = useLoaderData();
+  const MovieCardData = useLoaderData();
+  console.log(MovieCardData);
   return (
-    <div className="flexContainer movieCardContainerLayout">
-      {movieCardData.results.map((data) => (
-        <Link to="details/" key={data.id}>
+    <>
+      {MovieCardData.results.map((data) => (
+        <Link to={`details/${data.id}`} key={data.id}>
           <StyledArticle>
             <figure>
-              <Image
-                width="143"
-                shadow={true}
-                src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`}
-                alt="Cover Image"
-              />
+              <Image width="143" shadow={true} src={`https://image.tmdb.org/t/p/w200/${data.poster_path}`} alt="Cover Image" />
             </figure>
             <Heading
               title={
                 data.title.length > 25
-                  ? data.title.substring(0, 25) + "..."
+                  ? data.title.split(" ").slice(0, 3).join(" ") + "..."
                   : data.title
               }
               size="14"
@@ -40,7 +35,7 @@ const NowShowing = () => {
           </StyledArticle>
         </Link>
       ))}
-    </div>
+    </>
   );
 };
 
