@@ -26,14 +26,14 @@ const StyledP = styled.p`
   font-size: 12px;
 `;
 
-const MovieInfo = () => {
+const MovieInfo  = (props) => {
   return (
     <StyledSection>
       <div className="flexContainer justify-space-between">
         <Heading title="Spiderman: No Way Home" size="20" as="h1" />
         <StyledFaRegBookmark />
       </div>
-      <Rating />
+      <Rating  />
       <StyledFlexSection>
         <Label title="action" />
         <Label title="action" />
