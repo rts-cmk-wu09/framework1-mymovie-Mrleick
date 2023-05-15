@@ -1,10 +1,9 @@
-import "./main.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import DetailsView from "./pages/DetailsView";
 import ListView from "./pages/ListView";
-import RouteNotFound from "./pages/RouteNotFound";
+import ErrorView from "./pages/ErrorView";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,15 +11,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ListViewData } from "./pages/ListView";
-import { detailsViewData } from "./pages/DetailsView";
+import { DetailsViewData } from "./pages/DetailsView";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />} errorElement={<RouteNotFound />}>
+    <Route path="/" element={<App />} errorElement={<ErrorView />}>
       <Route index loader={ListViewData} element={<ListView />} />
       <Route
         path="/details/:id"
-        loader={({ params }) => detailsViewData(params.id)}
+        loader={DetailsViewData}
         element={<DetailsView />}
       />
     </Route>

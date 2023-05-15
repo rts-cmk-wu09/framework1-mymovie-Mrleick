@@ -43,10 +43,14 @@ const ListView = () => {
 export const ListViewData = async () => {
   return await Promise.allSettled([
     axios(
-      "https://api.themoviedb.org/3/movie/now_playing/?api_key=74800f373e5a296266dcd67ef1c52da6"
+      `https://api.themoviedb.org/3/movie/now_playing/?api_key=${
+        import.meta.env.VITE_TMDB_API_KEY
+      }`
     ),
     axios(
-      "https://api.themoviedb.org/3/movie/popular/?api_key=74800f373e5a296266dcd67ef1c52da6"
+      `https://api.themoviedb.org/3/movie/popular/?api_key=${
+        import.meta.env.VITE_TMDB_API_KEY
+      }`
     ),
   ]).then((data) => {
     return {
