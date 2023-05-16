@@ -1,11 +1,11 @@
+import axios from "axios";
+import { Link, useLoaderData } from "react-router-dom";
+import { FaArrowLeft, FaPlay } from "react-icons/fa";
 import styled, { css } from "styled-components";
 import Switch from "../components/Switch";
-import { FaArrowLeft, FaPlay } from "react-icons/fa";
 import MovieInfo from "../templates/MovieInfo";
 import MovieDescription from "../templates/MovieDescription";
 import MovieCast from "../templates/MovieCast";
-import { Link, useLoaderData } from "react-router-dom";
-import axios from "axios";
 
 const StyledHeader = styled.header`
   display: grid;
